@@ -21,6 +21,7 @@ export default createGlobalStyle`
     a{
         color: #f9f9f9;
         text-decoration: none;
+        cursor: pointer;
     }
 
     @media only screen and (min-width: 768px){
