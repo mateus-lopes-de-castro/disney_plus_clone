@@ -1,10 +1,10 @@
 import React from 'react';
 
-import ViewerDisneyImg from '../../assets/viewers-disney.png';
-import ViewerPixarImg from '../../assets/viewers-pixar.png';
-import ViewerMarvelImg from '../../assets/viewers-marvel.png';
-import ViewerStarWarsImg from '../../assets/viewers-starwars.png';
-import ViewerNationalImg from '../../assets/viewers-national.png';
+import ViewerDisneyImg from '../../assets/viewer/viewers-disney.png';
+import ViewerPixarImg from '../../assets/viewer/viewers-pixar.png';
+import ViewerMarvelImg from '../../assets/viewer/viewers-marvel.png';
+import ViewerStarWarsImg from '../../assets/viewer/viewers-starwars.png';
+import ViewerNationalImg from '../../assets/viewer/viewers-national.png';
 
 import { Container, Wrap } from './styles';
 

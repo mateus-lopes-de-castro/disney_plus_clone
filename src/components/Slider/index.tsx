@@ -1,9 +1,9 @@
 
 
-import sliderBadingImg from '../../assets/slider-badging.jpg';
-import sliderScaleImg from '../../assets/slider-scale.jpg';
-import sliderBadagImg from '../../assets/slider-badag.jpg';
-import sliderScalesImg from '../../assets/slider-scales.jpg';
+import sliderBadingImg from '../../assets/slider/slider-badging.jpg';
+import sliderScaleImg from '../../assets/slider/slider-scale.jpg';
+import sliderBadagImg from '../../assets/slider/slider-badag.jpg';
+import sliderScalesImg from '../../assets/slider/slider-scales.jpg';
 
 import {Wrap, Carousel} from './styles'
 
