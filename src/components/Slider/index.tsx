@@ -7,7 +7,7 @@ import sliderScalesImg from '../../assets/slider-scales.jpg';
 
 import {Wrap, Carousel} from './styles'
 
-const ImgSlider = (props:any) => {
+const ImgSlider = () => {
     let settings = {
         dots: true,
         infinite: true,
