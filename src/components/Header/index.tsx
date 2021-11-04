@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from "react-router-dom";
 
 import MenuItemLink from '../MenuItemLink';
 import { Logo, Home, Search, WatchList, Original, Movie, Series } from '../../utils/icons';
@@ -7,6 +8,7 @@ import { Nav, LogoContainer, NavMenu, Login, SignOut, UserImg, DropDown } from '
 
 const Header: React.FC = () => {
     const [userName, setUserName] = useState('');
+    const history = useHistory();
     return (
         <Nav>
             <LogoContainer>
@@ -14,7 +16,7 @@ const Header: React.FC = () => {
             </LogoContainer>
 
             {!userName ? (
-                <Login onClick={() => {}}>Login</Login>
+                <Login onClick={() => history.push("/home")}>Login</Login>
             ) : (
                 <>
                     <NavMenu>

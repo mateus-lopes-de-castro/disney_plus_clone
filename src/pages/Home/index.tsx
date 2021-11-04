@@ -1,8 +1,14 @@
 import React from 'react';
 
+import Slider from '../../components/Slider';
+
+import { Container } from './styles'
+
 const Home: React.FC = () => {
     return (
-        <span>home</span>
+        <Container>
+            <Slider />
+        </Container>
     )
 }
 
