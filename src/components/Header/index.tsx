@@ -3,11 +3,12 @@ import { useHistory } from "react-router-dom";
 
 import MenuItemLink from '../MenuItemLink';
 import { Logo, Home, Search, WatchList, Original, Movie, Series } from '../../utils/icons';
+import Avatar from '../../assets/avatar.png';
 
 import { Nav, LogoContainer, NavMenu, Login, SignOut, UserImg, DropDown } from './styles';
 
 const Header: React.FC = () => {
-    const [userName, setUserName] = useState('');
+    const [userName, setUserName] = useState('sa');
     const history = useHistory();
     return (
         <Nav>
@@ -28,7 +29,7 @@ const Header: React.FC = () => {
                         <MenuItemLink name="SERIES" url="" img={Series} />
                     </NavMenu>
                     <SignOut>
-                        <UserImg src="" alt="" />
+                        <UserImg src={Avatar} alt="" />
                         <DropDown>
                             <span onClick={() => { }}>Sign out</span>
                         </DropDown>
