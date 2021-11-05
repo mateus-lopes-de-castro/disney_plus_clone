@@ -5,6 +5,7 @@ import Viewer from '../../components/Viewer';
 import Recommends from '../../components/Recommends';
 import NewDisney from '../../components/NewDisney';
 import Originals from '../../components/Originals';
+import Trending from '../../components/Trending';
 
 import imgBackground from '../../assets/home-background.png';
 
@@ -18,6 +19,7 @@ const Home: React.FC = () => {
             <Recommends />
             <NewDisney />
             <Originals />
+            <Trending />
         </Container>
     )
 }

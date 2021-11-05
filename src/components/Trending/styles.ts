@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding: 0 0 26px;
+
   > h4 {
     margin: 1.33rem 0;
   }

@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding: 0 0 26px;
+  > h4 {
+    margin: 1.33rem 0;
+  }
 `;
 
 export const Content = styled.div`
-  margin-top: 20px;
   display: grid;
   gap: 25px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
