@@ -1,23 +1,33 @@
-import React, { useState } from 'react';
-import { useHistory } from "react-router-dom";
+import React from 'react';
+
+import { useAuth } from '../../hooks/useAuth';
 
 import MenuItemLink from '../MenuItemLink';
 import { Logo, Home, Search, WatchList, Original, Movie, Series } from '../../utils/icons';
-import Avatar from '../../assets/avatar.png';
 
 import { Nav, LogoContainer, NavMenu, Login, SignOut, UserImg, DropDown } from './styles';
 
 const Header: React.FC = () => {
-    const [userName, setUserName] = useState('sa');
-    const history = useHistory();
+    
+    const {user, signInWithGoogle, signOutWithGoogle} = useAuth();
+   
+   
+    const handleSignIn = async () => {
+        await signInWithGoogle();
+    }
+
+    const handleSignOut = async () => {
+        await signOutWithGoogle();
+    }
+
     return (
         <Nav>
             <LogoContainer>
                 <img src={Logo} alt="Disney+" />
             </LogoContainer>
 
-            {!userName ? (
-                <Login onClick={() => history.push("/home")}>Login</Login>
+            {!user.id ? (
+                <Login onClick={handleSignIn}>Login</Login>
             ) : (
                 <>
                     <NavMenu>
@@ -29,9 +39,9 @@ const Header: React.FC = () => {
                         <MenuItemLink name="SERIES" url="" img={Series} />
                     </NavMenu>
                     <SignOut>
-                        <UserImg src={Avatar} alt="" />
+                        <UserImg src={user.avatar} alt="" />
                         <DropDown>
-                            <span onClick={() => { }}>Sign out</span>
+                            <span onClick={handleSignOut}>Sign out</span>
                         </DropDown>
                     </SignOut>
                 </>
