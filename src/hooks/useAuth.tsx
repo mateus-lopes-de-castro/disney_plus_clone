@@ -7,8 +7,8 @@ import avatarImg from '../assets/avatar.png';
 
 interface IAuthContext {
    user: IUser,
-   signInWithGoogle: () => Promise<void>;
-   signOutWithGoogle: () => Promise<void>;
+   signInWithGoogle: () => Promise<boolean>;
+   signOutWithGoogle: () => Promise<boolean>;
 }
 interface IUser {
    id: string;
@@ -29,7 +29,7 @@ const AuthProvider: React.FC = ({ children }) => {
            
             setUser({
                id: uid,
-               avatar: photoURL ? avatarImg : avatarImg
+               avatar: photoURL ? photoURL : avatarImg
             })
          }
       });
@@ -42,36 +42,41 @@ const AuthProvider: React.FC = ({ children }) => {
    async function signInWithGoogle() {
 
       const provider = new GoogleAuthProvider();
-      const res = signInWithPopup(auth, provider)
+      return await signInWithPopup(auth, provider)
          .then((result) => {
             const user = result.user;
             if (user){
                const { photoURL, uid } = user;
                setUser({
                   id: uid,
-                  avatar: photoURL ? avatarImg : avatarImg
+                  avatar: photoURL ? photoURL : avatarImg
                })
+               return true;
             }
+            return false;
                
          }).catch(() => {
             setUser({
                id: '',
                avatar: avatarImg
             })
+            return false;
          });
    }
 
    async function signOutWithGoogle(){
-      signOut(auth).then(() => {
+      return await signOut(auth).then(() => {
          setUser({
             id: '',
             avatar: avatarImg
          });
+         return true;
        }).catch(() => {
          setUser({
             id: '',
             avatar: avatarImg
          })
+         return false;
       });
    }
 

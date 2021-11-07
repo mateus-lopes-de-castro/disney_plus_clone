@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { useAuth } from '../../hooks/useAuth';
 
@@ -8,16 +9,22 @@ import { Logo, Home, Search, WatchList, Original, Movie, Series } from '../../ut
 import { Nav, LogoContainer, NavMenu, Login, SignOut, UserImg, DropDown } from './styles';
 
 const Header: React.FC = () => {
-    
-    const {user, signInWithGoogle, signOutWithGoogle} = useAuth();
-   
-   
+
+    const history = useHistory();
+    const { user, signInWithGoogle, signOutWithGoogle } = useAuth();
+
     const handleSignIn = async () => {
-        await signInWithGoogle();
+        await signInWithGoogle().then(res =>{
+            if(res)
+                history.push('/home');
+        });
     }
 
     const handleSignOut = async () => {
-        await signOutWithGoogle();
+        await signOutWithGoogle().then(res => {
+            if(res)
+                history.push('/');
+        });
     }
 
     return (
