@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+<h1 align="center">
+  <img alt="dashboard-financeiro" title="Dashboard Financeiro" src="https://user-images.githubusercontent.com/77696623/140840119-3fbec358-d0cf-4812-a327-6ba6a834b0dc.PNG" />
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<p align="center">
 
-In the project directory, you can run:
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🚀 Tecnologias
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-### `npm test`
+- HTML
+- CSS
+- TypeScript
+- Styled Components
+- React
+- React Router Dom
+- Firebase
+- MirajeJS
+- Axios
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 💻 Projeto
 
-### `npm run build`
+O projeto `Disney + clone` é uma aplicação inspirada na plataforma de streaming no Brasil da Disney + onde você pode realizar login utilizando sua conta google para visualizar o catálogo de filmes além de adicioná-los como favoritos, inserir comentários e assistir aos trailers.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O layout da aplicação foi inspirado no projeto do <a href="https://github.com/CleverProgrammers/cp-disney-plus-clone">Clever Programmer</a>.<br>
+Porem a aplicação foi totalmente refatorada com TypeScript, e utilizado a ContextApi do próprio React para compartilhamento de estados globais ao invés do Redux.<br>
+Também foi utilizado MirajeJS e Axios para emular um carregamento das informações por requisições de API.
+Além de funcionalidades extras como marcação de favoritos e comentários na página detalhes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Como utilizar?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Baixe esse repositório e com o seu o terminal, entre no diretório
 
-### `npm run eject`
+1. Abra um terminal e copie este repositório com o comando `git clone https://github.com/mateus-lopes-de-castro/disney_plus_clone.git`
+2. Entre na pasta disney_plus_clone
+3. Rode o comando `npm install` para instalar as dependências.
+4. Acesse o console de firebase para registrar uma aplicação propria e gerenciar suas credenciais (é gratuito).
+5. Crie um arquivo chamado .env.local na raiz do projeto e substitua a informação destacada pelas informações das crediciais geradas no seu projeto.<br>
+![credenciais](https://user-images.githubusercontent.com/77696623/140841983-295ba537-f2d6-4d29-97a0-59df7d143020.PNG)
+6. E pra iniciar a aplicação, rode o comando `npm run start` e acesse o endereço http://localhost:3000 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🔖 Layout
+![disney1](https://user-images.githubusercontent.com/77696623/140840201-9aab1e4b-6768-47dd-8803-927170e415d5.PNG)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![disney2](https://user-images.githubusercontent.com/77696623/140840237-a76962bc-7164-47bc-9d99-629bef5f1518.PNG)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![disney3](https://user-images.githubusercontent.com/77696623/140840252-edf6aeee-1d18-4618-a1cb-13838e2c3918.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![disney4](https://user-images.githubusercontent.com/77696623/140840258-21f013e1-a940-4608-9ab7-5ec755925c74.PNG)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
